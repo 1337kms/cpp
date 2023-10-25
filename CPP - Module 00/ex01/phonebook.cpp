@@ -1,24 +1,29 @@
 #include "class.hpp"
 
 int main() {
-    Contact contact;
+    int numberOfContacts;
+    std::cout << "Combien de contacts voulez-vous ajouter ? ";
+    std::cin >> numberOfContacts;
+    std::cin.clear();
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
-    std::string firstName, lastName, nickname, phoneNumber, darkestSecret;
+            
+    Contact contacts[numberOfContacts];
 
-    // Utilisation des setters pour demander des informations à l'utilisateur
-    contact.setFirstName(firstName);
-    contact.setLastName(lastName);
-    contact.setNickname(nickname);
-    contact.setPhoneNumber(phoneNumber);
-    contact.setDarkestSecret(darkestSecret);
-
-    // Utilisation des getters pour afficher les informations
-    std::cout << "Informations du contact :" << std::endl;
-    std::cout << "Prénom : " << contact.getFirstName() << std::endl;
-    std::cout << "Nom : " << contact.getLastName() << std::endl;
-    std::cout << "Pseudo : " << contact.getNickname() << std::endl;
-    std::cout << "Numéro de téléphone : " << contact.getPhoneNumber() << std::endl;
-    std::cout << "Secret le plus sombre : " << contact.getDarkestSecret() << std::endl;
-
+    for (int i = 0; i < numberOfContacts; i++)
+    {
+        std::cout << "Entrez les informations du contact #" << i + 1 << ":" << std::endl;
+        contacts[i].NewContact();
+    }
+    for (int i = 0; i < numberOfContacts; i++)
+    {
+        std::cout << "Informations du contact #" << i + 1 << ":" << std::endl;
+        std::cout << "Prénom : " << contacts[i].getFirstName() << std::endl;
+        std::cout << "Nom : " << contacts[i].getLastName() << std::endl;
+        std::cout << "Pseudo : " << contacts[i].getNickname() << std::endl;
+        std::cout << "Numéro de téléphone : " << contacts[i].getPhoneNumber() << std::endl;
+        std::cout << "Secret le plus sombre : " << contacts[i].getDarkestSecret() << std::endl;
+        std::cout << std::endl;
+    }
     return 0;
 }

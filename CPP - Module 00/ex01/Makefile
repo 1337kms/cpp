@@ -4,7 +4,7 @@ SRC		=	phonebook.cpp contact.cpp
 
 CC 		= c++
 
-FLAGS	= -std=c++17 -Wall -Wextra -Werror 
+FLAGS	= -std=c++17 -Wall -Wextra -Werror -g
 
 OBJS 	= $(SRC:.cpp=.o)
 
