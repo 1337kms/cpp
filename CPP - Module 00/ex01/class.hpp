@@ -4,6 +4,7 @@
 #include <string>
 #include <iostream>
 #include <limits>
+#include <iomanip>
 
 class Contact 
 {
@@ -51,7 +52,8 @@ class PhoneBook
 		void searchContact();
 
 	private:
-		Contact contacts[9];
+		Contact contacts[8];
+		int currentIndex;
 };
 
 #endif
