@@ -38,6 +38,6 @@ class PhoneBook
 
 	private:
 		Contact contacts[9];
-}
+};
 
 #endif
