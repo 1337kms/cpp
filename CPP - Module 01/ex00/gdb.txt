@@ -1,0 +1,9 @@
+(gdb) info proc mappings
+                                  ...
+0x555555559000     0x55555557a000    0x21000        0x0  rw-p   [heap]
+                                  ...
+0x7ffffffde000     0x7ffffffff000    0x21000        0x0  rw-p   [stack]
+(gdb) p stack_zombie
+$3 = {name = "abc"}
+(gdb) p heap_zombie
+$4 = (Zombie *) 0x55555556b6d0 
